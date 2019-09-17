@@ -1,8 +1,9 @@
 package br.edu.cesmac.model;
 
 public class Jornalista {
+
 	private int idJornalista;
-	private String nomeJornalista;
+	private String nome;
 
 	public int getIdJornalista() {
 		return idJornalista;
@@ -12,12 +13,12 @@ public class Jornalista {
 		this.idJornalista = idJornalista;
 	}
 
-	public String getNomeJornalista() {
-		return nomeJornalista;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setNomeJornalista(String nomeJornalista) {
-		this.nomeJornalista = nomeJornalista;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 }

@@ -8,7 +8,11 @@ import br.edu.cesmac.model.Editoria;
 
 public class EditoriaView {
 	
-	BufferedReader buffReader = new BufferedReader(new InputStreamReader(System.in));
+	BufferedReader buffReader;
+	
+	public EditoriaView() {
+		buffReader = new BufferedReader(new InputStreamReader(System.in));
+	}
 
 	public Editoria ler() throws NumberFormatException, IOException {
 		Editoria editoria = new Editoria();
@@ -21,5 +25,12 @@ public class EditoriaView {
 		
 		return editoria;
 	}
+	
+	public int lerIdEditoria() throws NumberFormatException, IOException {
+		System.out.println("Dados da Editoria para Excluir");
+		System.out.println("Código: ");
+
+		return Integer.parseInt(buffReader.readLine());
+	}	
 	
 }

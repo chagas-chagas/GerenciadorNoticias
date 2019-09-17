@@ -16,28 +16,38 @@ public class ManipuladorEditoria {
 		for (Editoria e : editorias) {
 			if (e.getIdEditoria() == editoria.getIdEditoria()) {
 				this.editorias.set(this.editorias.indexOf(e), editoria);
+				break;
 			}
 		}
-
 	}
 
 	public void excluir(Editoria editoria) {
 		this.editorias.remove(editoria);
-
 	}
 
 	public void listar() {
-		System.out.println("===============Editorias Cadatradas ===============");
+		System.out.println("\n===============Editorias Cadatradas ===============");
 
 		for(Editoria editoria : editorias) {
 			System.out.println("Código " + editoria.getIdEditoria() + " - " + editoria.getNome());
 		}
 		
-		System.out.println("=================================================== \n\n");
+		System.out.println("=================================================== \n");
 	}
 
 	public List<Editoria> getEditorias() {
 		return this.getEditorias();
 	}
+	
+	public Editoria getEditoriaById(int idEditoria) {
+		Editoria editoria = null;
+		for (Editoria e : editorias) {
+			if (e.getIdEditoria() == idEditoria) {
+				editoria = e;
+			}
+		}
+		
+		return editoria;
+	}	
 
 }
